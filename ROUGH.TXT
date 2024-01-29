@@ -1,0 +1,51 @@
+{/* {section && (
+                <section className="two" data-aos="fade-up"
+                    data-aos-duration="2000" >
+
+
+                    <div className="swip_main">
+                        <div className="swipbody">
+                            <span className="dislike"><Image src={Dislike} alt='dislike button' width={40} height={40} /></span>
+                            {showBulb && (
+                                <span className="bulb" data-aos="zoom-in-up"
+                                    data-aos-duration="2000"
+                                ></span>
+                            )}
+                            <div className="card" id='card1'>
+
+                                <span className="companylogo"><Image src={CompanyLogo} alt='comapny logo' width={58} height={58} /></span>
+
+                                <span className="image"
+
+                                >
+                                    {Showcar && (<Image
+                                        data-aos="zoom-in"
+                                        data-aos-duration="3000"
+                                        src={CarImage} alt='carimage' height={450} width={599} />)}</span>
+                                <div className="text">
+                                    <h1>BMW X5 M3 Competetion</h1>
+                                    <p>London, United Kingdom</p>
+                                </div>
+                            </div>
+                            <div className="card" id='card2'>
+
+                                <span className="companylogo"><Image src={CompanyLogo} alt='comapny logo' width={58} height={58} /></span>
+
+                                <span className="image"
+
+                                >
+                                    {Showcar && (<Image
+                                        data-aos="zoom-in"
+                                        data-aos-duration="3000"
+                                        src={CarImage} alt='carimage' height={450} width={599} />)}</span>
+                                <div className="text">
+                                    <h1>BMW X5 M3 Competetion</h1>
+                                    <p>London, United Kingdom</p>
+                                </div>
+                            </div>  
+                            
+                            <span className="like">
+                                <Image src={Like} alt='like button' width={40} height={40} />
+                            </span>
+                        </div>
+                    </div> */}

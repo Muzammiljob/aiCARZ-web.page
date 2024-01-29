@@ -1,0 +1,120 @@
+.faq {
+    padding: 110px;
+    background-color:white ;
+    /* margin-top: 500px; */
+}
+
+.heading {
+    font-size: 50px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 48px;
+}
+
+.QS{
+    display: flex;
+    justify-content:space-between ;
+}
+
+.QSONE {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.QSTWO{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+}
+
+.nocode {
+    width: 740px;
+    display: flex;
+    flex-direction: column;
+    height: 298px;
+    justify-content: center;
+    background-color: 
+    rgba(255, 255, 255, 1);
+    margin-bottom: 36px;
+    padding: 53px 42px 53px 42px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(8, 15, 52, 0.06);
+    gap: 17px;
+
+}
+
+.nocode>span>h1 {
+    font-size: 22px;
+}
+.nocode>span>p{
+    line-height: 30px;
+    color: 
+    rgba(111, 108, 144, 1);
+    width: 520px;
+    height: 117px;
+}
+.nocode>span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.webfolw {
+    height: 159px;
+    width: 740px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 53px 42px 53px 42px;
+    /* background-color: antiquewhite; */
+    margin-bottom: 36px;
+    border-radius: 16px;
+    
+    box-shadow: 0 0 10px rgba(8, 15, 52, 0.06);
+
+}
+
+.webfolw>h1 {
+    font-size: 22px;
+}
+.webfolw2 {
+    height: 159px;
+    width: 740px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 53px 42px 53px 42px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(8, 15, 52, 0.06);
+}
+
+.webfolw2>h1 {
+    font-size: 22px;
+}
+#subtract{
+    width: 54px;
+    height: 54px;
+    background-color: 
+    rgba(247, 247, 255, 1);
+    color:rgba(111, 108, 144, 1) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+#add{
+  background-color:rgba(0, 44, 136, 1) ;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  width: 54px;
+  height: 54px;
+  color: aliceblue;
+}
+.heading::after {
+    content: ".";
+    color: rgba(255, 57, 113, 1);
+  }
