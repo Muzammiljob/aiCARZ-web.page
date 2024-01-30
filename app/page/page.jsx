@@ -40,12 +40,12 @@ import Landover from './logos/landrover.png'
 
 const page = () => {
 
-    const [showBulb, setShowBulb] = useState(false);
-    const [showCar, setShowcar] = useState(false);
-    const [section, setSection] = useState(false)
-    const [showCard1, setShowCard1] = useState(true);
-    const [nav, setNav] = useState(true);
-    const [animationTriggered, setAnimationTriggered] = useState(true);
+    const [ShowBulb, setShowBulb] = useState(false);
+    const [ShowCar, setShowcar] = useState(false);
+    const [Section, setSection] = useState(false)
+    const [ShowCard1, setShowCard1] = useState(true);
+    const [Nav, setNav] = useState(true);
+    const [AnimationTriggered, setAnimationTriggered] = useState(true);
 
 
 
@@ -109,7 +109,7 @@ const page = () => {
 
             {/* SECTION ONE */}
 
-            {nav && (
+            {Nav && (
                 <section data-aos="fade-down"
                     data-aos-duration="4000" >
                     {/* NAV BAR */}
@@ -136,7 +136,7 @@ const page = () => {
             {/* SECTION TWO */}
 
 
-            {section && (
+            {Section && (
                 <section className="two" data-aos="fade-up" data-aos-duration="9000">
                     <div className="swip_main">
                         <div className="swipbody">
@@ -145,20 +145,20 @@ const page = () => {
                                     onClick={handleagainclick}
                                 />
                             </span>
-                            {showBulb && (
+                            {ShowBulb && (
                                 <span
                                     className="bulb"
                                     data-aos="fade-up"
                                     data-aos-duration="2000"
                                 ></span>
                             )}
-                            {showCard1 && (
+                            {ShowCard1 && (
                                 <div className="card" id='card1'>
                                     <span className="companylogo">
                                         <Image src={CompanyLogo} alt='comapny logo' width={58} height={58} />
                                     </span>
                                     <span className="image">
-                                        {showCar && (
+                                        {ShowCar && (
                                             <Image
                                                 data-aos="zoom-in-left"
                                                 data-aos-duration="2000"
@@ -173,7 +173,7 @@ const page = () => {
                                     </div>
                                 </div>
                             )}
-                            {!showCard1 && (
+                            {!ShowCard1 && (
                                 <div className="card" id='card2' data-aos="zoom-in"
                                     data-aos-offset="300" >
 
@@ -181,7 +181,7 @@ const page = () => {
                                         <Image src={CompanyLogo} alt='comapny logo' width={58} height={58} />
                                     </span>
                                     <span className="image">
-                                        {showCar && (
+                                        {ShowCar && (
                                             <Image
                                                 data-aos="zoom-in"
                                                 data-aos-duration="3000"
