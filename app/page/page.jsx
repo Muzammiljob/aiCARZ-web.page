@@ -1,7 +1,7 @@
     "use client"
     import React from 'react'
     import { useEffect, useState } from 'react';
-    import "./page.css"
+    import "./pppage.css"
     import Image from 'next/image'
     import Logo from '../../public/aseets/logoaicarz.svg'
     import MenuIcon from '@mui/icons-material/Menu';
@@ -306,10 +306,10 @@
                                 </div>
                             </section>
 
-                            <FAQ />
+                            {/* <FAQ /> */}
 
 
-                            <footer>
+                            {/* <footer>
 
                                 <div className="footer">
 
@@ -334,9 +334,9 @@
 
 
 
-                            </footer>
+                            </footer> */}
 
-                            <div className="policy">
+                            {/* <div className="policy">
                                 <span><div className="righTS">
                                     <p>© 2023 AiCarz</p>
                                     <p>Al Rights Reserved CARZAI LTD.</p>
@@ -347,7 +347,7 @@
                                         <p>User Data Deletion</p>
                                     </div></span>
 
-                            </div>
+                            </div> */}
 
 
                         </div>

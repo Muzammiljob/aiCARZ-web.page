@@ -2,6 +2,7 @@
     padding: 110px;
     background-color:white ;
     /* margin-top: 500px; */
+   /* background-color: antiquewhite; */
 }
 
 .heading {
@@ -14,7 +15,8 @@
 
 .QS{
     display: flex;
-    justify-content:space-between ;
+    justify-content:space-between ; 
+    flex-wrap: wrap;
 }
 
 .QSONE {
