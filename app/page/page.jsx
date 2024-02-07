@@ -9,16 +9,20 @@
     import "aos/dist/aos.css";
     import Like from "../../public/aseets/like.svg"
     import Dislike from "../../public/aseets/dislike.svg"
-    import CompanyLogo from "../../public/aseets/companylogo.svg"
+    import CompanyLogo from "../../public/aseets/minpng.png"
+    import Bmw22 from '../../public/aseets/Bmw33.svg'
     import CarImage from "../../public/aseets/carfigma.svg"
     import CarImage2 from "../../public/aseets/carimage2.svg"
     import Qr from "../../public/aseets/qrcode.svg"
     import Hundyai from "../../public/aseets/hundyai.svg"
-    import Swipimageone from '../../public/aseets/swipsimage.svg'
+    import Swipimageone from '../../public/aseets/swipone.png'
+    import Swipimagetwo from '../../public/aseets/carimage2.svg'
+    import Swipimagethree from '../../public/aseets/swipsimage.svg'
+    import   Swipimagefour from '../../public/aseets/swipsimage.svg'
     import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
     import EastIcon from '@mui/icons-material/East';
     import Qrwhite from "../../public/aseets/qrwhitw.svg"
-    import FAQ from "../FAQ/page"
+    import FAQ from "./FAQ/app"
     import Doubleimage from "../../public/aseets/doublemobile.svg"
     import Play from "../../public/aseets/apple.svg"
     import Google from "../../public/aseets/google.png"
@@ -106,6 +110,29 @@
             setAnimationTriggered(false);
         };
 
+
+        const [direction, setDirection] = useState('right');
+        const [currentIndex, setCurrentIndex] = useState(0);
+
+        const images = [Swipimageone, Swipimagetwo, Swipimagethree, Swipimagefour];
+        const titles = ["Swiping Interface 1", "Swiping Interface 2", "Swiping Interface 3", "Swiping Interface 4"];
+        const paragraphs = [
+            "Effortlessly swipe through a variety of car listings, making the search for your dream car an engaging and enjoyable experience.",
+            "Another set of content for image 2...",
+            "Content for image 3...",
+            "Content for image 4..."
+        ];
+    
+        const handleNext = () => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+            setDirection('left'); // Set direction to 'left' when user clicks on next
+        };
+    
+        const handleBack = () => {
+            setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+            setDirection('right'); // Set direction to 'right' when user clicks on back
+        };
+      
         return (
             <div >
                 <div className="animate">
@@ -161,7 +188,8 @@
                                 {ShowCard1 && (
                                     <div className="card" id='card1'>
                                         <span className="companylogo">
-                                            <Image src={CompanyLogo} alt='comapny logo' width={58} height={58} />
+                                            {/* <Image src={CompanyLogo} alt='comapny logo' width={58} height={58} /> */}
+                                            <Image src={Bmw22} alt='comapny logo' width={58} height={58} />
                                         </span>
                                         <span className="image">
                                             {ShowCar && (
@@ -180,10 +208,12 @@
                                     </div>
                                 )}
                                 {!ShowCard1 && (
-                                    <div className="card" id='card2' data-aos="zoom-in"
-                                        data-aos-offset="300" >
+                                    <div className="card" id='card2'
+                                    //  data-aos="zoom-in"
+                                    //     data-aos-offset="300" 
+                                        >
 
-                                        <span className="companylogo">
+                                        <span className="companylogo2">
                                             <Image src={CompanyLogo} alt='comapny logo' width={58} height={58} />
                                         </span>
                                         <span className="image">
@@ -279,37 +309,47 @@
                             {/* SWIPER CARD SWIPER INTERFACE */}
 
 
-                            <section id='swipercard'>
+                         
 
 
-                                <div className="swipcard">
+<section id='swipercard'>
+            <div className="swipcard">
+                <div className="swipslider">
+                    <div className="swipcontent">
+                        <h1>{titles[currentIndex]}</h1>
+                        <p>{paragraphs[currentIndex]}</p>
+                        {/* <div className="swipbutton">
+                            <span className="left" onClick={handleNext}><EastIcon sx={{ fontSize: 54 }} /></span>
+                            <span className="right" onClick={handleBack}><KeyboardBackspaceIcon sx={{ fontSize: 36 }} /></span>
+                        </div> */}
+                         <div className="swipbutton"> <span className={direction === 'left' ? "left" : "right"} onClick={handleNext}>
+                                <EastIcon
+                                //  sx={{ fontSize: 54 }} 
+                                />
+                            </span>
+                            <span className={direction === 'left' ? "right" : "left"} onClick={handleBack}>
+                                <KeyboardBackspaceIcon
+                                //  sx={{ fontSize: 36 }}
+                                  />
+                            </span>
+                        </div>
+                    </div>
+                    <div className="swipimage">
+                        <Image src={images[currentIndex]} alt='qrcode'width={250} height={504}   />
+                      
+                        
+                    </div>
+                    <span className="qrseconde">
+                        <span><Image src={Qrwhite} alt='qrcode' width={78} height={78} /> </span>
+                    </span>
+                </div>
+            </div>
+        </section>
+       
+                            <FAQ />
 
-                                    <div className="swipslider">
 
-                                        <div className="swipcontent">
-
-                                            <h1>Swiping Interface.</h1>
-                                            <p>Effortlessly swipe through a variety of car listings, making the search for your dream car an engaging and enjoyable experience.</p>
-                                            <div className="swipbutton">
-                                                <sapn className="left"><EastIcon sx={{ fontSize: 54 }} /></sapn>
-                                                <span className="right"><KeyboardBackspaceIcon sx={{ fontSize: 36 }} /></span>
-                                            </div>
-                                        </div>
-
-                                        <div className="swipimage">
-                                            <Image src={Swipimageone} alt='qrcode' width={350} height={664} />
-
-                                        </div>
-                                        <span className="qrseconde"><span><Image src={Qrwhite} alt='qrcode' width={78} height={78} /> </span></span>
-
-                                    </div>
-                                </div>
-                            </section>
-
-                            {/* <FAQ /> */}
-
-
-                            {/* <footer>
+                            <footer>
 
                                 <div className="footer">
 
@@ -325,7 +365,7 @@
                                         </span>
                                         <div className="socialbutton">
                                             <Image src={Play} width={214} height={55} />
-                                            <Image src={Google} width={214} height={75} />
+                                            <Image src={Google} width={214} height={80} />
                                         </div>
                                     </div>
 
@@ -333,10 +373,10 @@
                                 </div>
 
 
+                               
+                            </footer>
 
-                            </footer> */}
-
-                            {/* <div className="policy">
+                            <div className="policy">
                                 <span><div className="righTS">
                                     <p>© 2023 AiCarz</p>
                                     <p>Al Rights Reserved CARZAI LTD.</p>
@@ -347,7 +387,7 @@
                                         <p>User Data Deletion</p>
                                     </div></span>
 
-                            </div> */}
+                            </div> 
 
 
                         </div>

@@ -209,6 +209,13 @@ nav {
 
 
 }
+.companylogo2>img{
+    
+    z-index: 1;
+    width: auto;
+    height: auto;
+
+}
 
 /* SECTION SECONDE PART */
 
@@ -260,6 +267,7 @@ nav {
     padding: 1.5em;
 }
 
+
 .scrollar {
     display: flex;
     flex-direction: column;
@@ -276,10 +284,10 @@ nav {
 .scrollar>span {
     overflow: auto;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     flex-wrap: nowrap;
-    padding-left: 2em;
+    /* padding-left: 2em; */
 
 }
 
@@ -318,14 +326,13 @@ nav {
     font-weight: 400;
 }
 
-.scrollar > span {
+.scrollar .carlogos {
     display: inline-block;
-    margin-right: 20px;
+    /* margin-right: 60px; */
     animation: scrollAnimation 50s linear infinite;
     /* Adjusted duration */
-    display: flex;
-    width: 300px;
 }
+ 
 
 @keyframes scrollAnimation {
     0% {
@@ -336,6 +343,7 @@ nav {
         transform: translateX(-100%);
     }
 }
+
 
 /* SWIPE FETURE */
 
@@ -389,6 +397,17 @@ nav {
     position: absolute;
     right: 270px;
     top: -57%;
+    background: url(../../public/aseets/Body.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 800px;
+    display: flex;
+    overflow: hidden;
+    padding: 1em;
+}
+
+.swipimage>img {
+    height: 563px;
 }
 
 .swipbutton>.left {
@@ -398,6 +417,13 @@ nav {
 
 .swipbutton>.right {
     color: rgba(255, 255, 255, 0.2);
+
+}
+.swipbutton>.right>*{
+    font-size: 2em;
+}
+.swipbutton>.left>* {
+    font-size: 4em;
 
 }
 
@@ -538,10 +564,6 @@ footer {
     color: rgba(255, 57, 113, 1);
 }
 
-/* #way::after {
-    content: ".";
-    color: rgba(255, 57, 113, 1);
-} */
 
 .tagline>h1::after {
     content: ".";
@@ -601,7 +623,7 @@ footer {
         justify-content: space-around;
         width: 50%;
         height: auto;
-        padding: 0em 0em 0em 0em;
+        padding: 1em 0em 1em 0em;
         gap: 1em;
     }
 
@@ -697,7 +719,16 @@ footer {
         height: 34px;
     
 }
-    .image {
+
+.companylogo2>img{
+    
+    z-index: 1;
+    width: 107px;
+    height: 34px;
+
+}
+
+.image {
         width: 140%;
         height: auto;
         min-height: 150px
@@ -860,14 +891,22 @@ footer {
     .swipimage {
         top: -3%;
         width: 239px;
-        height: 499px;
+        /* height: 499px; */
         position: absolute;
-        left: 50%;
+        left: 52%;
         transform: translate(-50%, -50%);
+        background: url(../../public/aseets/Body.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        min-height: 400px;
+        display: flex;
+        overflow: hidden;
+        padding: 1em;
     }
+   
 
     .swipimage>img {
-        width: 239px;
+        width: 225px;
         height: 499px;
     }
 
@@ -895,5 +934,173 @@ footer {
         width: 100%;
         padding: 20px 6px 20px 6px;
         margin-right: 140px;
+    }
+
+
+
+
+    .scrollar .carlogos {
+        display: inline-block;
+        margin-right: 60px;
+        animation: scrollAnimation 50s linear infinite;
+        /* Adjusted duration */
+    }
+     .carlogos>img{
+        /* width: auto; */
+        /* max-width: 80px;
+        max-height: 83px !important; */
+     }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(to bottom, rgba(0, 13, 40, 1), rgba(0, 0, 0, 1));
+        height: 100%;
+        border-radius:
+            90px 90px 0px 0px;
+    
+    }
+    
+    .footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+    
+    }
+    
+    .footercontent {
+        display: flex;
+        color: white;
+        justify-content: center;
+        flex-direction: column;
+        width:90%;
+        gap: 3em;
+        padding-right: 0;
+        margin: auto;
+       
+    }
+    
+    .socialbutton {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    .text2 {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .text2>h1 {
+        color: aliceblue;
+        font-size: 20px;
+        line-height: 30.5px;
+        text-align: center;
+    }
+    
+    .text2>p {
+    
+        color: rgba(110, 110, 110, 1);
+        text-align: center;
+    }
+
+     .image2 {
+        position: relative;
+        text-align: center;
+    }
+    .socialbutton{
+        display: flex;
+        justify-content: center;
+    }
+    .socialbutton>img{
+        width: 100px;
+        height:auto;
+    }
+    
+    #image {
+        position: absolute;
+        top: -50%;
+        left: 0; 
+        right: 0;
+        margin: auto;
+        min-width: 210px;
+        min-height: 210px;
+        max-width: 300px;
+        max-height: 300px;
+    }
+   
+    #bulb {
+        margin-left: 2rem;
+        opacity: 50%;
+        z-index: 3;
+        height: 200px;
+        width: 200px;
+    }
+    
+    .policy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center ;
+        padding-left: 0px;
+        padding-right: 0px;
+        background-color: rgba(0, 0, 0, 1);
+        /* padding-top: 45px; */
+        /* padding-bottom: 45px; */
+        /* margin-top: -100px; */
+        width: 100%;
+        /* margin: auto; */
+       
+        /* background-color: antiquewhite; */
+    }
+    
+    .righTS {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        gap: 2em;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .polices {
+        display: flex;
+        gap: 2em;
+        flex-direction: column-reverse;
+        color: aliceblue;
+    }
+    
+    .policy>span {
+        border-top: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        /* padding-top: 45px; */
+    }
+
+
+    .scrollar>hr {
+        margin-left: 0em;
+        margin-right: 0em;
     }
 }
