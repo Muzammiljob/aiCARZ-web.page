@@ -3,7 +3,7 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import "./pppage.css"
 import Image from 'next/image'
-import Logo from '../../public/aseets/logoaicarz.svg'
+import Logo from '../../public/aseets/aircarzlogo.png'
 import MenuIcon from '@mui/icons-material/Menu';
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -14,7 +14,6 @@ import Bmw22 from '../../public/aseets/Bmw33.svg'
 import CarImage from "../../public/aseets/carfigma.svg"
 import CarImage2 from "../../public/aseets/carimage2.svg"
 import Qr from "../../public/aseets/qrcode.svg"
-import Hundyai from "../../public/aseets/hundyai.svg"
 import Swipimageone from '../../public/aseets/swipone.png'
 import Swipimagetwo from '../../public/aseets/carimage2.svg'
 import Swipimagethree from '../../public/aseets/swipsimage.svg'
@@ -24,22 +23,11 @@ import EastIcon from '@mui/icons-material/East';
 import Qrwhite from "../../public/aseets/qrwhitw.svg"
 import FAQ from "./FAQ/app"
 import Doubleimage from "../../public/aseets/doublemobile.svg"
-import Play from "../../public/aseets/apple.svg"
+import Play from "../../public/aseets/applee.svg"
 import Google from "../../public/aseets/google.png"
 import Bulb from "../../public/aseets/Bulb.png"
+import Scroolar from '../../app/scrool/page'
 
-import Audi from './logos/audi.png'
-import BMW from './logos/bmw.png'
-import Ford from './logos/ford.png'
-import Tesla from "./logos/tesla.png"
-import Volvo from './logos/volvo.png'
-import Toyota from './logos/toyota.png'
-import Lion from './logos/lion.png'
-import Bird from './logos/bird.png'
-import Bently from './logos/bently.png'
-import Jaguar from './logos/jaguar.png'
-import Kia from './logos/kia.png'
-import Landover from './logos/landrover.png'
 
 
 const Page = () => {
@@ -201,7 +189,7 @@ const Page = () => {
                                 <div className="card" id='card2'>
 
                                     <span className="companylogo2">
-                                        <Image src={CompanyLogo} alt='comapny logo' width={58} height={58} />
+                                        <Image src={CompanyLogo} alt='comapny logo'  />
                                     </span>
                                     <span className="image">
                                         {ShowCar && (
@@ -239,51 +227,11 @@ const Page = () => {
 
 
 
-                        <div className="scrollar">
-                            <hr />
-                            <span>
-                                <span className="carlogos">
-                                    <Image src={Hundyai} alt='Hundyai' width={150} height={100} />
-                                </span>
-                                <span className="carlogos">
-                                    <Image src={Jaguar} alt='Hundyai' />
-                                </span>
-                                <span className="carlogos">
-                                    <Image src={Toyota} alt='Hundyai' />
-                                </span>
-                                <span className="carlogos">
-                                    <Image src={Tesla} alt='Hundyai' />
-                                </span>
-                                <span className="carlogos">
-                                    <Image src={BMW} alt='Hundyai' />
-                                </span>
-                                <span className="carlogos">
-                                    <Image src={Ford} alt='Hundyai' />
-                                </span>
-                                <span className="carlogos">
-                                    <Image src={Bently} alt='Hundyai' />
-                                </span>
-                                <span className="carlogos">
-                                    <Image src={Bird} alt='Hundyai' />
-                                </span>
-                                <span className="carlogos">
-                                    <Image src={Kia} alt='Hundyai' />
-                                </span>
-                                <span className="carlogos">
-                                    <Image src={Volvo} alt='Hundyai' />
-                                </span>
-                                <span className="carlogos">
-                                    <Image src={Audi} alt='Hundyai' />
-                                </span>
-                                <span className="carlogos">
-                                    <Image src={Landover} alt='Hundyai' />
-                                </span>
-                                <span className="carlogos">
-                                    <Image src={Lion} alt='Hundyai' />
-                                </span>
-
-                            </span>
-                            <hr />
+                       
+                        <div className="scroolar">
+                        <hr />
+                        <Scroolar/>
+                        <hr />
                         </div>
 
 
@@ -325,6 +273,7 @@ const Page = () => {
                             </div>
                         </section>
 
+{/* <h1>fffffffffff</h1> */}
                         <FAQ />
 
 
@@ -343,7 +292,7 @@ const Page = () => {
                                         <p >Our Innovative App Brings Together a Curated Selection Of Cars Tailored To Your Preferences.</p>
                                     </span>
                                     <div className="socialbutton">
-                                        <Image src={Play} width={214} height={55} />
+                                        <Image src={Play} width={210} height={55} />
                                         <Image src={Google} width={214} height={80} />
                                     </div>
                                 </div>
