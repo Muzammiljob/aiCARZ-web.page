@@ -59,7 +59,9 @@ export default function App() {
 
   return (
     <div className="app  flex">
-   
+  <div className="faqh1">
+  <h1>Frequently Asked Questions.</h1>
+  </div>
       <div className="faqs flex ">
         {faqs.map((faq, index) => (
           <FAQ faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />

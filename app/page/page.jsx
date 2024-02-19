@@ -218,7 +218,7 @@ const Page = () => {
 
                     <div className="secsecpart2">
                         <div className="deals">
-                            <div className="dealtext">Never miss out on <br />a great deal with AiCarz</div>
+                            <div className="dealtext">Never miss out on a great deal with AiCarz</div>
                             <div className="qrtext">
                                 <span id="qrtext">Download our app <br /> by scanning the QR</span>
                                 <span className="qr"><Image src={Qr} alt='qrcode' width={78} height={78} /></span>
@@ -236,8 +236,8 @@ const Page = () => {
 
 
                         <div className="tagline">
-                            <h1 >Driven by the most intelligent car <br /> recommendation engine</h1>
-                            <p>Our Innovative App Brings Together a Curated Selection <br /> Of Cars Tailored To Your Preferences.</p>
+                            <h1 >Driven by the most intelligent car recommendation engine</h1>
+                            <p>Our Innovative App Brings Together a Curated Selection  Of Cars Tailored To Your Preferences.</p>
                         </div>
 
 
@@ -269,11 +269,15 @@ const Page = () => {
                                     <span className="qrseconde">
                                         <span><Image src={Qrwhite} alt='qrcode' width={78} height={78} /> </span>
                                     </span>
+                                    {/* <div className="bulbswip">
+                                  
+                                </div> */}
                                 </div>
+                               
                             </div>
                         </section>
 
-{/* <h1>fffffffffff</h1> */}
+
                         <FAQ />
 
 
