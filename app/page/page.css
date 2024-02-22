@@ -2010,7 +2010,7 @@ footer {
     footer {
         display: flex;
         background: linear-gradient(to bottom, rgba(0, 13, 40, 1), rgba(0, 0, 0, 1));
-        height: 350px;
+        height: 550px;
         border-radius:
             138px 130px 0px 0px;
 
@@ -2034,7 +2034,7 @@ footer {
         gap: 3em;
         padding-right: 0px;
         width: 70%;
-        padding-top: 2em;
+        padding-top: -30px;
 
     }
 
@@ -2070,9 +2070,9 @@ footer {
     }
 
     #image {
-        width: 380px;
+        width: 480px;
         position: absolute;
-        top: -95%;
+        top: -55%;
         left: 60px;
     }
 
@@ -2080,7 +2080,7 @@ footer {
         margin-left: 2rem;
         opacity: 50%;
         z-index: 3;
-        height: 450px;
+        height: 490px;
         width: 100%;
     }
 
@@ -2571,7 +2571,7 @@ footer {
     footer {
         display: flex;
         background: linear-gradient(to bottom, rgba(0, 13, 40, 1), rgba(0, 0, 0, 1));
-        height: 350px;
+        height: 550px;
         border-radius:
             138px 130px 0px 0px;
 
@@ -2595,7 +2595,7 @@ footer {
         gap: 3em;
         padding-right: 0px;
         width: 70%;
-        padding-top: 2em;
+        padding-top: 0em;
 
     }
 
@@ -2631,9 +2631,9 @@ footer {
     }
 
     #image {
-        width: 380px;
+        width: 480px;
         position: absolute;
-        top: -95%;
+        top: -55%;
         left: 60px;
     }
 
@@ -2641,7 +2641,7 @@ footer {
         margin-left: 2rem;
         opacity: 50%;
         z-index: 3;
-        height: 450px;
+        height: 550px;
         width: 100%;
     }
 

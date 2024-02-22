@@ -154,9 +154,9 @@ const Page = () => {
                         <span className="logo">
                             <Image src={Logo} alt='logo' width={114} height={47} />
                         </span>
-                        <span className="burgermenu">
+                        {/* <span className="burgermenu">
                             <MenuIcon sx={{ fontSize: 24 }} />
-                        </span>
+                        </span> */}
                     </nav>
 
                     {/* HEADING OR PARAGRAPH */}
