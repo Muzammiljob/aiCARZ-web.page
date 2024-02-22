@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import { useEffect, useState } from 'react';
-import "./pppage.css"
+import "./page.css"
 import Image from 'next/image'
 import Logo from '../../public/aseets/aircarzlogo.png'
 import MenuIcon from '@mui/icons-material/Menu';
@@ -24,11 +24,11 @@ import Qrwhite from "../../public/aseets/qrwhitw.svg"
 import FAQ from "./FAQ/app"
 import Doubleimage from "../../public/aseets/doublemobile.svg"
 import Play from "../../public/aseets/applee.svg"
-import Google from "../../public/aseets/google.png"
+import Google from "../../public/aseets/google.svg"
 import Bulb from "../../public/aseets/Bulb.png"
 import Scroolar from '../../app/scrool/page'
-
-
+import Benz from '../../public/aseets/benz3.png'
+import Merstadies from "../../public/aseets/Mer.svg"
 
 const Page = () => {
 
@@ -41,7 +41,7 @@ const Page = () => {
 
 
     // USE AOS FOR ANIMATION
-    
+
     useEffect(() => {
         AOS.init();
     }, []);
@@ -105,15 +105,36 @@ const Page = () => {
         "Content for image 4..."
     ];
 
+
+
     const handleNext = () => {
+        // Increment the current index to move to the next image
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        setDirection('left'); // Set direction to 'left' when user clicks on next
+        // Check if the next index will be interface 4
+        if ((currentIndex + 1) % images.length === 3) {
+            // If the next index is interface 4, set the direction to 'right'
+            setDirection('right');
+        } else {
+            // If not at interface 4, set the direction to 'left'
+            setDirection('left');
+        }
     };
 
     const handleBack = () => {
+        // Decrement the current index to move to the previous image
         setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-        setDirection('right'); // Set direction to 'right' when user clicks on back
+        // Check if the current index is interface 1
+        if (currentIndex === 0) {
+            // If at interface 1, set the direction to 'right'
+            setDirection('left');
+        } else {
+            // If not at interface 1, set the direction to 'left'
+            setDirection('right');
+        }
     };
+
+
+
 
     return (
         <div >
@@ -164,45 +185,52 @@ const Page = () => {
                                 <span
                                     className="bulb"
                                     data-aos="fade-up"
-                                    data-aos-duration="2000"
+                                    data-aos-duration="9000"
                                 ></span>
                             )}
                             {ShowCard1 && (
-                                <div className="card" id='card1'>
-                                    <span className="companylogo"> <Image src={Bmw22} alt='comapny logo' width={58} height={58} />
-                                    </span>
-                                    <span className="image">
-                                        {ShowCar && (
+                                <div className="holder">
+                                    <div className="card" id='card1' data-aos="fade-left" >
+                                        <span className="companylogo"> <Image src={Bmw22} alt='comapny logo' width={58} height={58} />
+                                        </span>
+                                        <span className="image">
+
                                             <Image
                                                 data-aos="zoom-in-left"
-                                                data-aos-duration="2000" src={CarImage} alt='carimage' height={450} width={599}
+                                                data-aos-duration="2000"
+                                                src={CarImage} alt='carimage' height={450} width={599}
                                             />
-                                        )}
-                                    </span>
-                                    <div className="text">
-                                        <h1>BMW X5 M3 Competetion</h1>
-                                        <p>London, United Kingdom</p>
+
+                                        </span>
+                                        <div className="text">
+                                            <h1>BMW X5 M3 Competetion</h1>
+                                            <p>London, United Kingdom</p>
+                                        </div>
                                     </div>
+
                                 </div>
                             )}
                             {!ShowCard1 && (
-                                <div className="card" id='card2'>
+                                <div className="holder">
+                                    <div className="card" id='card2' data-aos="fade-left" data-aos-duration="1000">
 
-                                    <span className="companylogo2">
-                                        <Image src={CompanyLogo} alt='comapny logo'  />
-                                    </span>
-                                    <span className="image">
-                                        {ShowCar && (
+                                        <span className="companylogo">
+                                            <Image src={Merstadies} alt='comapny logo' width={58} height={58} />
+
+                                        </span>
+                                        <span className="image">
+
                                             <Image
-                                                data-aos="zoom-in"
-                                                data-aos-duration="3000"
-                                                src={CarImage2} alt='carimage' height={450} width={599}
+                                                data-aos="zoom-in-left"
+                                                data-aos-duration="2000"
+                                                src={Benz} alt='carimage'
                                             />
-                                        )}
-                                    </span>
-                                    <div className="text">
-                                        <h1>Mini Cooper Countrymen</h1>
-                                        <p>London, United Kingdom</p>
+
+                                        </span>
+                                        <div className="text">
+                                            <h1>MERCEDES-Benz ML-CLASS</h1>
+                                            <p>London, United Kingdom</p>
+                                        </div>
                                     </div>
                                 </div>
                             )}
@@ -227,11 +255,11 @@ const Page = () => {
 
 
 
-                       
+
                         <div className="scroolar">
-                        <hr />
-                        <Scroolar/>
-                        <hr />
+                            <hr />
+                            <Scroolar />
+                            <hr />
                         </div>
 
 
@@ -273,7 +301,7 @@ const Page = () => {
                                   
                                 </div> */}
                                 </div>
-                               
+
                             </div>
                         </section>
 
@@ -296,8 +324,8 @@ const Page = () => {
                                         <p >Our Innovative App Brings Together a Curated Selection Of Cars Tailored To Your Preferences.</p>
                                     </span>
                                     <div className="socialbutton">
-                                        <Image src={Play} width={210} height={55} />
-                                        <Image src={Google} width={214} height={80} />
+                                        <Image src={Play} />
+                                        <Image src={Google} />
                                     </div>
                                 </div>
 

@@ -6,7 +6,7 @@
   
   body {
     font-family: sans-serif;
-   
+
   }
   
 
@@ -19,6 +19,7 @@
   }
   
   .faqs {
+
     /* width: 100%;
     max-width: 100%; */
     margin: 0 auto;
@@ -63,7 +64,9 @@ cursor: pointer;
  
   
   .faqs .faq .faq-question::after {
-    content: "+";
+    content: "\002B";
+    font-family: 'Material Icons';
+    /* content: "AddRounded"; */
     border-radius: 8px;
     position: absolute;
     top: 35%;
@@ -79,7 +82,8 @@ cursor: pointer;
     align-items: center;
     width: 54px;
     height: 54px;
-    font-size: 2.5em;
+    font-weight: 700;
+    font-size: 46px;
     color:     
 rgba(111, 108, 144, 1);
 padding-bottom: 0.1em;
@@ -100,7 +104,9 @@ padding-bottom: 0.1em;
   }
   
   .faqs .faq.open .faq-question::after {
-    content: "-";
+    content: "\002D";
+ 
+    font-family: 'Material Icons'; 
     background-color: rgba(0, 44, 136, 1);
     color: white;
    border-radius: 8px;

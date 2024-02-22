@@ -6,7 +6,7 @@ import Audi from './logos/audi.png';
 import BMW from './logos/bmw.png';
 import Ford from './logos/ford.png';
 import Tesla from "./logos/tesla.png";
-import Volvo from './logos/volvo.png';
+
 import Toyota from './logos/toyota.png';
 import Lion from './logos/lion.png';
 import Bird from './logos/bird.png';
