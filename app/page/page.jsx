@@ -224,6 +224,7 @@ const Page = () => {
                                                 data-aos="zoom-in-left"
                                                 data-aos-duration="2000"
                                                 src={Benz} alt='carimage'
+                                                height={450} width={599}
                                             />
 
                                         </span>
