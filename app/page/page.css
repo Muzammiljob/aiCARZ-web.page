@@ -330,7 +330,7 @@ nav {
     font-size: 24px;
     font-weight: 400;
     width: 595px;
-    height: 84px;
+    /* height: 84px; */
 }
 
 .swipcard {
@@ -374,23 +374,34 @@ nav {
     z-index: 2;
     position: absolute;
     right: 270px;
+    /* position: relative; */
     top: -57%;
     background: url(../../public/aseets/Body.png);
     background-repeat: no-repeat;
     background-size: contain;
-    min-height: 800px;
+    /* max-height: 563px; */
     display: flex;
     overflow: hidden;
+    /* max-width: 200px; */
     padding: 1em;
+    height:600px ;
+    width: 300px;
 }
 
 .swipimage>img {
-    height: 563px;
+    /* height: 563px; */
+    /* border-radius: 50px; */
+    /* overflow: hidden; */
     z-index: 2;
+    
 }
 
 
-
+.swipimage>video{
+    /* width: 100px !important; */
+    height: 100%;
+    border-radius: 50px;
+}
 
 .swipbutton>.left {
     color: aliceblue;

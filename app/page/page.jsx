@@ -14,7 +14,7 @@ import Bmw22 from '../../public/aseets/Bmw33.svg'
 import CarImage from "../../public/aseets/carfigma.svg"
 import CarImage2 from "../../public/aseets/carimage2.svg"
 import Qr from "../../public/aseets/qrcode.svg"
-import Swipimageone from '../../public/aseets/swipone.png'
+import Swipimageone from '../../public/aseets/swip.mp4'
 import Swipimagetwo from '../../public/aseets/carimage2.svg'
 import Swipimagethree from '../../public/aseets/swipsimage.svg'
 import Swipimagefour from '../../public/aseets/swipsimage.svg'
@@ -95,43 +95,59 @@ const Page = () => {
 
     const [direction, setDirection] = useState('right');
     const [currentIndex, setCurrentIndex] = useState(0);
-
-    const images = [Swipimageone, Swipimagetwo, Swipimagethree, Swipimagefour];
-    const titles = ["Swiping Interface 1", "Swiping Interface 2", "Swiping Interface 3", "Swiping Interface 4"];
+    const images = [
+        Swipimageone,
+        Swipimagetwo,
+        Swipimagethree,
+        Swipimagefour,
+        Swipimagefour, // Add the fifth image here
+    ];
+    const titles = [
+        "Swiping Interface",
+        "Place an Advert Now ! ",
+        "Your Personal Tyre Inspector!",
+        "Meet Your New AI Powered Chatbot ",
+        "Discover Flawless Precision: AI Panel Gap Checker!" // Add the fifth title here
+    ];
     const paragraphs = [
-        "Effortlessly swipe through a variety of car listings, making the search for your dream car an engaging and enjoyable experience.",
-        "Another set of content for image 2...",
-        "Content for image 3...",
-        "Content for image 4..."
+        // `Swipe Right to Like, Swipe Left to Dislike! <br>
+        //  Discovering your ideal car is now effortless with our intuitive swiping feature. 
+        //  By swiping right on cars you fancy and swiping left on those that don't 
+        //  quite meet your criteria, you're helping our recommendation
+        //   engine fine-tune its suggestions to better suit your preferences.`,
+        <>
+        Swipe Right to Like, Swipe Left to Dislike! <br />
+        Discovering your ideal car is now effortless with our intuitive swiping feature. By swiping right on cars you fancy and swiping left on those that don't quite meet your criteria, you're helping our recommendation engine fine-tune its suggestions to better suit your preferences.
+    </>,
+        "Showcase your cars with stunning images and detailed descriptions, giving potential buyers a comprehensive view of what you have to offer. From luxury sedans to rugged SUVs, our platform accommodates all types of vehicles, ensuring that your listings stand out from the crowd.",
+        " Worried about the hassle of manual inspections? Say goodbye to the guesswork and hello to peace of mind. With AI Tyre Scan, you'll receive accurate assessments in seconds, empowering you to make informed decisions about your tyre maintenance and replacement needs.",
+        "Say hello to the future of car shopping! Introducing our latest feature: Voice Search Chatbot. Now, finding your dream car is as easy as having a conversation.",
+        " Powered by advanced AI Computer Vision our Panel Gap Checker ensures that every detail of your car is meticulously inspected for flawless alignment and precision. Whether it's the gap between panels our AI leaves no stone unturned in its quest for perfection." // Add the fifth paragraph here
     ];
 
 
 
     const handleNext = () => {
-        // Increment the current index to move to the next image
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        // Check if the next index will be interface 4
-        if ((currentIndex + 1) % images.length === 3) {
-            // If the next index is interface 4, set the direction to 'right'
+        // Check if the next index will be the last index
+        if ((currentIndex + 1) % images.length === images.length - 1) {
             setDirection('right');
         } else {
-            // If not at interface 4, set the direction to 'left'
             setDirection('left');
         }
     };
 
     const handleBack = () => {
-        // Decrement the current index to move to the previous image
         setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-        // Check if the current index is interface 1
+        // Check if the current index is at the beginning
         if (currentIndex === 0) {
-            // If at interface 1, set the direction to 'right'
             setDirection('left');
         } else {
-            // If not at interface 1, set the direction to 'left'
             setDirection('right');
         }
     };
+
+
 
 
 
@@ -291,8 +307,11 @@ const Page = () => {
                                         </div>
                                     </div>
                                     <div className="swipimage">
-                                        <Image src={images[currentIndex]} alt='qrcode' width={250} height={504} />
-
+                                        {/* <Image src={images[currentIndex]} alt='qrcode' width={250} height={504} /> */}
+                                        <video className="video" autoPlay loop controls>
+                                            <source src={images[currentIndex]} type="video/mp4"  />
+                                            Your browser does not support the video tag.
+                                        </video>
 
                                     </div>
                                     <span className="qrseconde">
