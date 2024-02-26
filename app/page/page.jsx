@@ -14,10 +14,11 @@ import Bmw22 from '../../public/aseets/Bmw33.svg'
 import CarImage from "../../public/aseets/carfigma.svg"
 import CarImage2 from "../../public/aseets/carimage2.svg"
 import Qr from "../../public/aseets/qrcode.svg"
-import Swipimageone from '../../public/aseets/swip.mp4'
-import Swipimagetwo from '../../public/aseets/carimage2.svg'
-import Swipimagethree from '../../public/aseets/swipsimage.svg'
-import Swipimagefour from '../../public/aseets/swipsimage.svg'
+import Swipvedioone from '../../public/aseets/swiping.mp4'
+import Swipvediotwo from '../../public/aseets/voicesearch.mp4'
+import Swipvediothree from '../../public/aseets/caradd.mp4'
+import Swipvediofour from '../../public/aseets/pannelgap.mp4'
+import Swipvediofive from '../../public/aseets/tyrecheaker.mp4'
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import EastIcon from '@mui/icons-material/East';
 import Qrwhite from "../../public/aseets/qrwhitw.svg"
@@ -82,67 +83,75 @@ const Page = () => {
 
 
 
-    const handleLikeClick = () => {
-        setShowCard1((prevShowCard1) => !prevShowCard1);
-        setAnimationTriggered(true);
-    };
+    // const handleLikeClick = () => {
+    //     setShowCard1((prevShowCard1) => !prevShowCard1);
+    //     setAnimationTriggered(true);
+    // };
 
-    const handleagainclick = () => {
-        setShowCard1((prevShowCard1) => !prevShowCard1);
-        setAnimationTriggered(false);
-    };
+    // const handleagainclick = () => {
+    //     setShowCard1((prevShowCard1) => !prevShowCard1);
+    //     setAnimationTriggered(false);
+    // };
 
 
     const [direction, setDirection] = useState('right');
     const [currentIndex, setCurrentIndex] = useState(0);
-    const images = [
-        Swipimageone,
-        Swipimagetwo,
-        Swipimagethree,
-        Swipimagefour,
-        Swipimagefour, // Add the fifth image here
+    console.log("crrrentindex", currentIndex)
+
+    const vedios = [
+        Swipvedioone,
+        Swipvediotwo,
+        Swipvediothree,
+        Swipvediofour,
+        Swipvediofive,
     ];
     const titles = [
         "Swiping Interface",
-        "Place an Advert Now ! ",
-        "Your Personal Tyre Inspector!",
         "Meet Your New AI Powered Chatbot ",
-        "Discover Flawless Precision: AI Panel Gap Checker!" // Add the fifth title here
+        "Place an Advert Now ! ",
+        "Discover Flawless Precision: AI Panel Gap Checker!",
+        "Your Personal Tyre Inspector!",
+
+
     ];
     const paragraphs = [
-        // `Swipe Right to Like, Swipe Left to Dislike! <br>
-        //  Discovering your ideal car is now effortless with our intuitive swiping feature. 
-        //  By swiping right on cars you fancy and swiping left on those that don't 
-        //  quite meet your criteria, you're helping our recommendation
-        //   engine fine-tune its suggestions to better suit your preferences.`,
+
         <>
-        Swipe Right to Like, Swipe Left to Dislike! <br />
-        Discovering your ideal car is now effortless with our intuitive swiping feature. By swiping right on cars you fancy and swiping left on those that don't quite meet your criteria, you're helping our recommendation engine fine-tune its suggestions to better suit your preferences.
-    </>,
-        "Showcase your cars with stunning images and detailed descriptions, giving potential buyers a comprehensive view of what you have to offer. From luxury sedans to rugged SUVs, our platform accommodates all types of vehicles, ensuring that your listings stand out from the crowd.",
-        " Worried about the hassle of manual inspections? Say goodbye to the guesswork and hello to peace of mind. With AI Tyre Scan, you'll receive accurate assessments in seconds, empowering you to make informed decisions about your tyre maintenance and replacement needs.",
+            Swipe Right to Like, Swipe Left to Dislike! <br />
+            Discovering your ideal car is now effortless with our intuitive swiping feature. By swiping right on cars you fancy and swiping left on those that don't quite meet your criteria, you're helping our recommendation engine fine-tune its suggestions to better suit your preferences.
+        </>,
         "Say hello to the future of car shopping! Introducing our latest feature: Voice Search Chatbot. Now, finding your dream car is as easy as having a conversation.",
-        " Powered by advanced AI Computer Vision our Panel Gap Checker ensures that every detail of your car is meticulously inspected for flawless alignment and precision. Whether it's the gap between panels our AI leaves no stone unturned in its quest for perfection." // Add the fifth paragraph here
+        "Showcase your cars with stunning images and detailed descriptions, giving potential buyers a comprehensive view of what you have to offer. From luxury sedans to rugged SUVs, our platform accommodates all types of vehicles, ensuring that your listings stand out from the crowd.",
+        " Powered by advanced AI Computer Vision our Panel Gap Checker ensures that every detail of your car is meticulously inspected for flawless alignment and precision. Whether it's the gap between panels our AI leaves no stone unturned in its quest for perfection.", // Add the fifth paragraph here
+        " Worried about the hassle of manual inspections? Say goodbye to the guesswork and hello to peace of mind. With AI Tyre Scan, you'll receive accurate assessments in seconds, empowering you to make informed decisions about your tyre maintenance and replacement needs.",
     ];
 
-
-
     const handleNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        // Check if the next index will be the last index
-        if ((currentIndex + 1) % images.length === images.length - 1) {
+        // Increment the current index to move to the next video
+        console.log("Current index before increment:", currentIndex);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % vedios.length);
+        console.log("Current index after increment:", currentIndex);
+        // Check if the next index will be at index 3
+        if ((currentIndex + 1) % vedios.length === 3) {
+            // If the next index is at index 3, set the direction to 'right'
             setDirection('right');
         } else {
+            // If not at index 3, set the direction to 'left'
             setDirection('left');
         }
     };
 
     const handleBack = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-        // Check if the current index is at the beginning
+        // Decrement the current index to move to the previous video
+        console.log("Current index before decrement:", currentIndex);
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + vedios.length) % vedios.length);
+        console.log("Current index after decrement:", currentIndex);
+        // Check if the current index is at index 0
         if (currentIndex === 0) {
+            // If at index 0, set the direction to 'right'
             setDirection('left');
         } else {
+            // If not at index 0, set the direction to 'left'
             setDirection('right');
         }
     };
@@ -151,6 +160,36 @@ const Page = () => {
 
 
 
+    // const [currentIndex, setCurrentIndex] = useState(0);
+    const [likedCards, setLikedCards] = useState([]);
+    const [dislikedCards, setDislikedCards] = useState([]);
+    const [key, setKey] = useState(0); // Add a state for the key
+
+    const cardContent = [
+        { id: 1, image: CarImage, paragraph: "Paragraph 1 goes here", logo: Bmw22, title: "Title 1" },
+        { id: 2, image: Benz, paragraph: "Paragraph 2 goes here", logo: Merstadies, title: "Title 2" },
+        { id: 3, image: CarImage, paragraph: "Paragraph 3 goes here", logo: Bmw22, title: "Title 3" },
+        { id: 4, image: Benz, paragraph: "Paragraph 4 goes here", logo: Merstadies, title: "Title 4" },
+        { id: 5, image: CarImage, paragraph: "Paragraph 5 goes here", logo: Bmw22, title: "Title 5" },
+        { id: 6, image: Benz, paragraph: "Paragraph 6 goes here", logo: Merstadies, title: "Title 6" },
+        { id: 7, image: CarImage, paragraph: "Paragraph 7 goes here", logo: Bmw22, title: "Title 7" },
+        { id: 8, image: Benz, paragraph: "Paragraph 8 goes here", logo: Merstadies, title: "Title 8" },
+
+
+
+    ];
+
+    const handleLikeClick = () => {
+        setLikedCards([...likedCards, cardContent[currentIndex]]);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % cardContent.length);
+        setKey(prevKey => prevKey + 1); // Increment the key to force re-render
+    };
+
+    const handleagainclick = () => {
+        setDislikedCards([...dislikedCards, cardContent[currentIndex]]);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % cardContent.length);
+        setKey(prevKey => prevKey + 1); // Increment the key to force re-render
+    };
 
     return (
         <div >
@@ -204,59 +243,35 @@ const Page = () => {
                                     data-aos-duration="9000"
                                 ></span>
                             )}
-                            {ShowCard1 && (
-                                <div className="holder">
-                                    <div className="card" id='card1' data-aos="fade-left" >
-                                        <span className="companylogo"> <Image src={Bmw22} alt='comapny logo' width={58} height={58} />
-                                        </span>
-                                        <span className="image">
 
-                                            <Image
-                                                data-aos="zoom-in-left"
-                                                data-aos-duration="2000"
-                                                src={CarImage} alt='carimage' height={450} width={599}
-                                            />
 
-                                        </span>
-                                        <div className="text">
-                                            <h1>BMW X5 M3 Competetion</h1>
-                                            <p>London, United Kingdom</p>
-                                        </div>
+                            <div className="holder">
+                                <div className="card" id='card1' data-aos="fade-left" key={key}> {/* Use the key prop */}
+                                    <span className="companylogo">
+                                        <Image src={cardContent[currentIndex].logo} alt='company logo' width={58} height={58} />
+                                    </span>
+                                    <span className="image">
+                                        <Image
+                                            data-aos="zoom-in-left"
+                                            data-aos-duration="2000"
+                                            src={cardContent[currentIndex].image} alt='car image' height={450} width={599}
+                                        />
+                                    </span>
+                                    <div className="text">
+                                        <h1>{cardContent[currentIndex].title}</h1>
+                                        <p>{cardContent[currentIndex].paragraph}</p>
                                     </div>
 
                                 </div>
-                            )}
-                            {!ShowCard1 && (
-                                <div className="holder">
-                                    <div className="card" id='card2' data-aos="fade-left" data-aos-duration="1000">
-
-                                        <span className="companylogo">
-                                            <Image src={Merstadies} alt='comapny logo' width={58} height={58} />
-
-                                        </span>
-                                        <span className="image">
-
-                                            <Image
-                                                data-aos="zoom-in-left"
-                                                data-aos-duration="2000"
-                                                src={Benz} alt='carimage'
-                                                height={450} width={599}
-                                            />
-
-                                        </span>
-                                        <div className="text">
-                                            <h1>MERCEDES-Benz ML-CLASS</h1>
-                                            <p>London, United Kingdom</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
+                            </div>
                             <span className="like" onClick={handleLikeClick}
                             >
                                 <Image src={Like} alt='like button' width={40} height={40} />
                             </span>
                         </div>
                     </div>
+
+
 
                     {/* SECTION TWO WHITE BODY SCROLL BAR AND FAQ SWIPING VEDIO */}
 
@@ -308,10 +323,12 @@ const Page = () => {
                                     </div>
                                     <div className="swipimage">
                                         {/* <Image src={images[currentIndex]} alt='qrcode' width={250} height={504} /> */}
-                                        <video className="video" autoPlay loop controls>
-                                            <source src={images[currentIndex]} type="video/mp4"  />
+                                        <video className="video" autoPlay loop key={vedios[currentIndex]} playbackRate={2} data-aos="fade-left"
+                                            data-aos-duration="4000" >
+                                            <source src={vedios[currentIndex] + `?t=${Date.now()}`} type="video/mp4" />
                                             Your browser does not support the video tag.
                                         </video>
+
 
                                     </div>
                                     <span className="qrseconde">
@@ -358,8 +375,8 @@ const Page = () => {
 
                         <div className="policy">
                             <span><div className="righTS">
-                                <p>© 2023 AiCarz</p>
-                                <p>Al Rights Reserved CARZAI LTD.</p>
+                                <p>© 2024 AICarz</p>
+                                <p>All Rights Reserved CARZAI LTD.</p>
                             </div>
                                 <div className="polices">
                                     <p> Privacy Policy</p>
