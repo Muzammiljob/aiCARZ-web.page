@@ -204,12 +204,18 @@ nav {
 .companylogo {
     z-index: 1;
     margin-bottom: -30px;
+  
+}
+.companylogo>image{
+   object-fit: contain;
 }
 
 .image {
     width: 599px;
     height: 449px;
-
+display: flex;
+justify-content: center;
+align-items: center;
 
 }
 

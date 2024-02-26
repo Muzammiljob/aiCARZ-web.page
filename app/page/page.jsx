@@ -30,7 +30,16 @@ import Bulb from "../../public/aseets/Bulb.png"
 import Scroolar from '../../app/scrool/page'
 import Benz from '../../public/aseets/benz3.png'
 import Merstadies from "../../public/aseets/Mer.svg"
-
+import Car2 from "../../public/aseets/car33.png"
+import Car4 from "../../public/aseets/car55.png"
+import Car6 from "../../public/aseets/alpha.png"
+import Car7 from "../../public/aseets/car7.webp"
+import Royals from "../../public/aseets/logo99.png"
+import Alphalogo from "../../public/aseets/alphalogo2.png"
+import Wwgolf from "../../public/aseets/wwgolf.png"
+import Volkslogo from "../../public/aseets/volks.png"
+import Ferrari from "../../public/aseets/ferari.png"
+import Ferrarilogo from "../../public/aseets/mcleran.png"
 const Page = () => {
 
     const [ShowBulb, setShowBulb] = useState(false);
@@ -118,12 +127,24 @@ const Page = () => {
 
         <>
             Swipe Right to Like, Swipe Left to Dislike! <br />
-            Discovering your ideal car is now effortless with our intuitive swiping feature. By swiping right on cars you fancy and swiping left on those that don't quite meet your criteria, you're helping our recommendation engine fine-tune its suggestions to better suit your preferences.
+            Discovering your ideal car is now effortless with our intuitive swiping feature. Our Intelligent
+            system learns more and more about your requirements as you keep using it. By swiping right on
+            cars you fancy and swiping left on those you don't, our recommendation engine bring up better
+            suggestions for you as it goes by.
         </>,
         "Say hello to the future of car shopping! Introducing our latest feature: Voice Search Chatbot. Now, finding your dream car is as easy as having a conversation.",
-        "Showcase your cars with stunning images and detailed descriptions, giving potential buyers a comprehensive view of what you have to offer. From luxury sedans to rugged SUVs, our platform accommodates all types of vehicles, ensuring that your listings stand out from the crowd.",
-        " Powered by advanced AI Computer Vision our Panel Gap Checker ensures that every detail of your car is meticulously inspected for flawless alignment and precision. Whether it's the gap between panels our AI leaves no stone unturned in its quest for perfection.", // Add the fifth paragraph here
-        " Worried about the hassle of manual inspections? Say goodbye to the guesswork and hello to peace of mind. With AI Tyre Scan, you'll receive accurate assessments in seconds, empowering you to make informed decisions about your tyre maintenance and replacement needs.",
+
+        "It's as easy as uploading a pic of your number plate, and our intelligent system will automatically upload your vehicle details.",
+
+        <>Assess damages more easily with our intelligent Panel Gap Checker.<br />
+            Our world-first AI Computer Vision tool inspects major body work done by scanning for
+            extraordinary gaps and imperfections through pictures.</>,
+
+        <>Assess tyre quality through our next world-first AI Computer Vision tool. This will scan
+            pictures of your tires and inform you whether they are worn out and need replacement, this will
+            help you avoid road penalties, and/or hazards, and acknowledge extra costs to be incurred before
+            buying your car.
+        </>,
     ];
 
     const handleNext = () => {
@@ -166,14 +187,12 @@ const Page = () => {
     const [key, setKey] = useState(0); // Add a state for the key
 
     const cardContent = [
-        { id: 1, image: CarImage, paragraph: "Paragraph 1 goes here", logo: Bmw22, title: "Title 1" },
-        { id: 2, image: Benz, paragraph: "Paragraph 2 goes here", logo: Merstadies, title: "Title 2" },
-        { id: 3, image: CarImage, paragraph: "Paragraph 3 goes here", logo: Bmw22, title: "Title 3" },
-        { id: 4, image: Benz, paragraph: "Paragraph 4 goes here", logo: Merstadies, title: "Title 4" },
-        { id: 5, image: CarImage, paragraph: "Paragraph 5 goes here", logo: Bmw22, title: "Title 5" },
-        { id: 6, image: Benz, paragraph: "Paragraph 6 goes here", logo: Merstadies, title: "Title 6" },
-        { id: 7, image: CarImage, paragraph: "Paragraph 7 goes here", logo: Bmw22, title: "Title 7" },
-        { id: 8, image: Benz, paragraph: "Paragraph 8 goes here", logo: Merstadies, title: "Title 8" },
+        { id: 1, image: CarImage, paragraph: "London, United Kingdom", logo: Bmw22, title: "BMW X5 M Competition" },
+        { id: 2, image: Car4, paragraph: "Canterbury, United Kingdom", logo: Royals, title: "Rolls Royce Ghost" },
+        { id: 3, image: Ferrari, paragraph: "Bristol, United Kingdom", logo: Ferrarilogo, title: "McLaren 750S" },
+        { id: 4, image: Car6, paragraph: "Milton Keynes, United Kingdom", logo: Alphalogo, title: "Alfa Romeo Giulia" },
+        { id: 5, image: Wwgolf, paragraph: "Plymouth, United Kingdom", logo: Volkslogo, title: "Volkswagen New Golf" },
+        // { id: 6, image: Benz, paragraph: "Ripon, United Kingdom", logo: Merstadies, title: "Title 6" },
 
 
 
@@ -255,6 +274,7 @@ const Page = () => {
                                             data-aos="zoom-in-left"
                                             data-aos-duration="2000"
                                             src={cardContent[currentIndex].image} alt='car image' height={450} width={599}
+                                            style={{ height: "auto" }}
                                         />
                                     </span>
                                     <div className="text">
@@ -323,7 +343,7 @@ const Page = () => {
                                     </div>
                                     <div className="swipimage">
                                         {/* <Image src={images[currentIndex]} alt='qrcode' width={250} height={504} /> */}
-                                        <video className="video" autoPlay loop key={vedios[currentIndex]} playbackRate={2} data-aos="fade-left"
+                                        <video className="video" autoPlay muted loop key={vedios[currentIndex]} playbackRate={2} data-aos="fade-left"
                                             data-aos-duration="4000" >
                                             <source src={vedios[currentIndex] + `?t=${Date.now()}`} type="video/mp4" />
                                             Your browser does not support the video tag.
