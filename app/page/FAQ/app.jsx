@@ -31,34 +31,69 @@ export default function App() {
    
     
   
-    {
-      question:
-      "I'm experiencing technical issues with AICarz. What should I do?",
-      answer:  <>If you encounter any issues or have suggestions for improvement, please reach out to our customer support team through the app's &quot;Support&quot; section or email us at <br />  <a href="www.aicarz.com">support@aicarz.com</a>. We are dedicated to providing a seamless user experience and value your input.</>
-      , open: false,
-    },
+    // {
+    //   question:
+    //   "I'm experiencing technical issues with AICarz. What should I do?",
+    //   answer:  <>If you encounter any issues or have suggestions for improvement, please reach out to our customer support team through the app's &quot;Support&quot; section or email us at <br />  <a href="www.aicarz.com">support@aicarz.com</a>. We are dedicated to providing a seamless user experience and value your input.</>
+    //   , open: false,
+    // },
     
+    // {
+    //   question:
+    //     "How do I place an Advert?",
+    //   answer:  <>- Enter your car registration  in the advert section, and your vehicle details will be uploaded automatically. <br />
+    //   - Add your vehicle images manually. <br />
+    //   - Submit your Advert for Approval. <br />
+    //   Once approved, your advert will be up! Simple process!
+    //   </>,
+    //   open: false,
+    // },
+    // {
+    //   question:
+    //     "How can I scan for damages on the cars?",
+    //   answer: <>- Go to the bottom right corner to &quot;Car Check.&quot;  <br />
+    //   - Slide the slider option that appears on the center of the screen to AI Tire Check, or AI Car Check. <br />
+    //   Follow the simple instructions! <br /> <br />
+    //   We can indicate the following for your ease using our newly created World-first AI powered: - <br />
+    //    a.Panel gap checker <br />
+    //   b.Tyre Health checker</>, 
+    //     open: false,
+    // },
     {
-      question:
-        "How do I place an Advert?",
-      answer:  <>- Enter your car registration  in the advert section, and your vehicle details will be uploaded automatically. <br />
-      - Add your vehicle images manually. <br />
-      - Submit your Advert for Approval. <br />
-      Once approved, your advert will be up! Simple process!
-      </>,
+      question: "I'm experiencing technical issues with AICarz. What should I do?",
+      answer: (
+        <>If you encounter any issues or have suggestions for improvement, please reach out to our customer support team through the app&apos;s &quot;Support&quot; section or email us at <br />
+          <a href="www.aicarz.com">support@aicarz.com</a>. We are dedicated to providing a seamless user experience and value your input.</>
+      ),
       open: false,
     },
     {
-      question:
-        "How can I scan for damages on the cars?",
-      answer: <>- Go to the bottom right corner to &quot;Car Check.&quot;  <br />
-      - Slide the slider option that appears on the center of the screen to AI Tire Check, or AI Car Check. <br />
-      Follow the simple instructions! <br /> <br />
-      We can indicate the following for your ease using our newly created World-first AI powered: - <br />
-       a.Panel gap checker <br />
-      b.Tyre Health checker</>, 
-        open: false,
+      question: "How do I place an Advert?",
+      answer: (
+        <> 
+          - Enter your car registration in the advert section, and your vehicle details will be uploaded automatically. <br />
+          - Add your vehicle images manually. <br />
+          - Submit your Advert for Approval. <br />
+          Once approved, your advert will be up! Simple process!
+        </>
+      ),
+      open: false,
     },
+    {
+      question: "How can I scan for damages on the cars?",
+      answer: (
+        <>
+          - Go to the bottom right corner to &quot;Car Check.&quot; <br />
+          - Slide the slider option that appears on the center of the screen to AI Tire Check, or AI Car Check. <br />
+          Follow the simple instructions! <br /> <br />
+          We can indicate the following for your ease using our newly created World-first AI powered: - <br />
+          a. Panel gap checker <br />
+          b. Tyre Health checker
+        </>
+      ),
+      open: false,
+    }
+    
 
   ]);
 
