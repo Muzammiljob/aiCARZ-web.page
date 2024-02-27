@@ -9,13 +9,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Like from "../../public/aseets/like.svg"
 import Dislike from "../../public/aseets/dislike.svg"
-import CompanyLogo from "../../public/aseets/minpng.png"
 import Bmw22 from '../../public/aseets/Bmw33.svg'
 import CarImage from "../../public/aseets/carfigma.svg"
-import CarImage2 from "../../public/aseets/carimage2.svg"
 import Qr from "../../public/aseets/qrcode.svg"
 import Swipvedioone from '../../public/aseets/swiping.mp4'
-import Swipvediotwo from '../../public/aseets/voicesearch.mp4'
+import Swipvediotwo from '../../public/aseets/voice2.mp4'
 import Swipvediothree from '../../public/aseets/caradd.mp4'
 import Swipvediofour from '../../public/aseets/pannelgap.mp4'
 import Swipvediofive from '../../public/aseets/tyrecheaker.mp4'
@@ -23,20 +21,18 @@ import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import EastIcon from '@mui/icons-material/East';
 import Qrwhite from "../../public/aseets/qrwhitw.svg"
 import FAQ from "./FAQ/app"
-import Doubleimage from "../../public/aseets/doublemobile.svg"
+import Doubleimage from "../../public/aseets/double2.png"
 import Play from "../../public/aseets/applee.svg"
 import Google from "../../public/aseets/google.svg"
 import Bulb from "../../public/aseets/Bulb.png"
 import Scroolar from '../../app/scrool/page'
-import Benz from '../../public/aseets/benz3.png'
+import Benz from '../../public/aseets/brabus.png'
 import Merstadies from "../../public/aseets/Mer.svg"
-import Car2 from "../../public/aseets/car33.png"
-import Car4 from "../../public/aseets/car55.png"
+import Car4 from "../../public/aseets/newroyals.png"
 import Car6 from "../../public/aseets/alpha.png"
-import Car7 from "../../public/aseets/car7.webp"
 import Royals from "../../public/aseets/logo99.png"
 import Alphalogo from "../../public/aseets/alphalogo2.png"
-import Wwgolf from "../../public/aseets/wwgolf.png"
+import Wwgolf from "../../public/aseets/volks2.png"
 import Volkslogo from "../../public/aseets/volks.png"
 import Ferrari from "../../public/aseets/ferari.png"
 import Ferrarilogo from "../../public/aseets/mcleran.png"
@@ -54,8 +50,8 @@ const Page = () => {
 
     useEffect(() => {
         AOS.init();
+        setDirection('left');
     }, []);
-
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -92,18 +88,9 @@ const Page = () => {
 
 
 
-    // const handleLikeClick = () => {
-    //     setShowCard1((prevShowCard1) => !prevShowCard1);
-    //     setAnimationTriggered(true);
-    // };
-
-    // const handleagainclick = () => {
-    //     setShowCard1((prevShowCard1) => !prevShowCard1);
-    //     setAnimationTriggered(false);
-    // };
 
 
-    const [direction, setDirection] = useState('right');
+    const [direction, setDirection] = useState('left');
     const [currentIndex, setCurrentIndex] = useState(0);
     console.log("crrrentindex", currentIndex)
 
@@ -116,9 +103,9 @@ const Page = () => {
     ];
     const titles = [
         "Swiping Interface",
-        "Meet Your New AI Powered Chatbot ",
+        "Meet Adam, your AI Chatbot!",
         "Place an Advert Now ! ",
-        "Discover Flawless Precision: AI Panel Gap Checker!",
+        "AI Panel Gap Checker!",
         "Your Personal Tyre Inspector!",
 
 
@@ -126,24 +113,15 @@ const Page = () => {
     const paragraphs = [
 
         <>
-            Swipe Right to Like, Swipe Left to Dislike! <br />
-            Discovering your ideal car is now effortless with our intuitive swiping feature. Our Intelligent
-            system learns more and more about your requirements as you keep using it. By swiping right on
-            cars you fancy and swiping left on those you don't, our recommendation engine bring up better
-            suggestions for you as it goes by.
+            Easily like with a right swipe or dislike with a left! Find your perfect car effortlessly as our smart system learns your preferences, refining suggestions the more you swipe.
         </>,
-        "Say hello to the future of car shopping! Introducing our latest feature: Voice Search Chatbot. Now, finding your dream car is as easy as having a conversation.",
+        "Welcome to the future of car shopping with our Voice Search feature, making finding your dream car as simple as chatting.",
 
-        "It's as easy as uploading a pic of your number plate, and our intelligent system will automatically upload your vehicle details.",
+        "Just enter your car registration, and our intelligent system will auto-fill your vehicle details.",
 
-        <>Assess damages more easily with our intelligent Panel Gap Checker.<br />
-            Our world-first AI Computer Vision tool inspects major body work done by scanning for
-            extraordinary gaps and imperfections through pictures.</>,
+        <>Easily assess damage with our AI tool that scans for gaps and imperfections in bodywork through pictures.</>,
 
-        <>Assess tyre quality through our next world-first AI Computer Vision tool. This will scan
-            pictures of your tires and inform you whether they are worn out and need replacement, this will
-            help you avoid road penalties, and/or hazards, and acknowledge extra costs to be incurred before
-            buying your car.
+        <>Use our AI tool to scan tire photos, assess wear, and avoid penalties, hazards, or unexpected costs before buying
         </>,
     ];
 
@@ -153,7 +131,7 @@ const Page = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % vedios.length);
         console.log("Current index after increment:", currentIndex);
         // Check if the next index will be at index 3
-        if ((currentIndex + 1) % vedios.length === 3) {
+        if ((currentIndex + 1) % vedios.length === 4) {
             // If the next index is at index 3, set the direction to 'right'
             setDirection('right');
         } else {
@@ -181,21 +159,18 @@ const Page = () => {
 
 
 
-    // const [currentIndex, setCurrentIndex] = useState(0);
+
     const [likedCards, setLikedCards] = useState([]);
     const [dislikedCards, setDislikedCards] = useState([]);
-    const [key, setKey] = useState(0); // Add a state for the key
+    const [key, setKey] = useState(0);
 
     const cardContent = [
         { id: 1, image: CarImage, paragraph: "London, United Kingdom", logo: Bmw22, title: "BMW X5 M Competition" },
-        { id: 2, image: Car4, paragraph: "Canterbury, United Kingdom", logo: Royals, title: "Rolls Royce Ghost" },
+        { id: 2, image: Car4, paragraph: "Canterbury, United Kingdom", logo: Royals, title: "Rolls Royce Phantom" },
         { id: 3, image: Ferrari, paragraph: "Bristol, United Kingdom", logo: Ferrarilogo, title: "McLaren 750S" },
         { id: 4, image: Car6, paragraph: "Milton Keynes, United Kingdom", logo: Alphalogo, title: "Alfa Romeo Giulia" },
-        { id: 5, image: Wwgolf, paragraph: "Plymouth, United Kingdom", logo: Volkslogo, title: "Volkswagen New Golf" },
-        // { id: 6, image: Benz, paragraph: "Ripon, United Kingdom", logo: Merstadies, title: "Title 6" },
-
-
-
+        { id: 5, image: Wwgolf, paragraph: "Plymouth, United Kingdom", logo: Volkslogo, title: "Volkswagen Tiguan" },
+        { id: 6, image: Benz, paragraph: "Ripon, United Kingdom", logo: Merstadies, title: "Mercedes-Benz-G-Class" },
     ];
 
     const handleLikeClick = () => {
@@ -228,9 +203,7 @@ const Page = () => {
                         <span className="logo">
                             <Image src={Logo} alt='logo' width={114} height={47} />
                         </span>
-                        {/* <span className="burgermenu">
-                            <MenuIcon sx={{ fontSize: 24 }} />
-                        </span> */}
+                       
                     </nav>
 
                     {/* HEADING OR PARAGRAPH */}
@@ -250,9 +223,9 @@ const Page = () => {
                 <section className="two" data-aos="fade-up" data-aos-duration="9000">
                     <div className="swip_main">
                         <div className="swipbody">
-                            <span className="dislike">
+                            <span className="dislike" onClick={handleagainclick}>
                                 <Image src={Dislike} alt='dislike button' width={40} height={40}
-                                    onClick={handleagainclick}
+
                                 />
                             </span>
                             {ShowBulb && (
@@ -267,7 +240,7 @@ const Page = () => {
                             <div className="holder">
                                 <div className="card" id='card1' data-aos="fade-left" key={key}> {/* Use the key prop */}
                                     <span className="companylogo">
-                                        <Image src={cardContent[currentIndex].logo} alt='company logo' width={58} height={58} />
+                                        <Image id='logo11' src={cardContent[currentIndex].logo} alt='company logo' width={58} height={58} />
                                     </span>
                                     <span className="image">
                                         <Image
@@ -343,7 +316,7 @@ const Page = () => {
                                     </div>
                                     <div className="swipimage">
                                         {/* <Image src={images[currentIndex]} alt='qrcode' width={250} height={504} /> */}
-                                        <video className="video" autoPlay muted loop key={vedios[currentIndex]} playbackRate={2} data-aos="fade-left"
+                                        <video className="video" autoPlay muted loop playsInline key={vedios[currentIndex]} playbackRate={2} data-aos="fade-left"
                                             data-aos-duration="4000" >
                                             <source src={vedios[currentIndex] + `?t=${Date.now()}`} type="video/mp4" />
                                             Your browser does not support the video tag.

@@ -204,7 +204,11 @@ nav {
 .companylogo {
     z-index: 1;
     margin-bottom: -30px;
+  /* background-color: aqua; */
   
+}
+#logo11{
+    object-fit: contain;
 }
 .companylogo>image{
    object-fit: contain;
@@ -390,7 +394,7 @@ align-items: center;
     overflow: hidden;
     /* max-width: 200px; */
     padding: 1em;
-    height:600px ;
+    height:596px ;
     width: 300px;
 }
 
@@ -406,7 +410,9 @@ align-items: center;
 .swipimage>video{
     /* width: 100px !important; */
     height: 100%;
-    border-radius: 50px;
+    border-radius: 47px 47px 44px 44px;
+    margin-left: -3px;
+    
 }
 
 .swipbutton>.left {
@@ -511,6 +517,7 @@ footer {
 }
 
 #image {
+    height: auto;
     position: absolute;
     top: -25%;
     left: 111px;
@@ -1029,14 +1036,17 @@ footer {
 
     #image {
         position: absolute;
-        top: -50%;
+        top: -62%;
         left: 0;
         right: 0;
         margin: auto;
+        height: auto;
+        padding-bottom: 1em;
+        /* margin-bottom: 1em; */
         min-width: 210px;
-        min-height: 210px;
+        /* min-height: 210px; */
         max-width: 300px;
-        max-height: 300px;
+        /* max-height: 300px; */
     }
 
     #bulb {
@@ -1116,7 +1126,9 @@ footer {
     .burgermenu {
         display: none;
     }
-
+.scroolar{
+    margin-top: 50px;
+}
     .head-container {
         display: flex;
         justify-content: center;
@@ -1186,48 +1198,48 @@ footer {
         padding-right: 0.3em;
     }
 
-    .dislike {
-        background-color: rgba(0, 13, 40, 1);
-        border-radius: 50%;
-        border: 2px solid white;
-        width: 6%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-        margin-top: 70px;
-        cursor: pointer;
-        padding: 0.5rem;
-    }
 
-    .like {
-        background-color: rgba(0, 13, 40, 1);
-        border-radius: 50%;
-        border: 2px solid white;
-        width: 6%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-        margin-top: 70px;
-        cursor: pointer;
-        padding: 0.5rem;
-    }
+ .dislike {
+    background-color: rgba(0, 13, 40, 1);
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 55px;
+    height:55px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-top: 70px;
+    cursor: pointer;
+    padding: 0.5rem;
+}
 
-    .dislike>img {
-        width: 100%;
-        height: auto;
+.like {
+    background-color: rgba(0, 13, 40, 1);
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 55px;
+    height:55px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-top: 70px;
+    cursor: pointer;
+    padding: 0.5rem;
+}
 
-    }
+.dislike>img {
+    width: 50%;
+    height: auto;
 
-    .like>img {
-        width: 100%;
-        height: auto;
+}
 
-    }
+.like>img {
+    width: 50%;
+    height: auto;
 
+}
     .text {
         display: flex;
         justify-content: center;
@@ -1274,7 +1286,7 @@ footer {
     .image {
         width: 140%;
         height: auto;
-        min-height: 160px
+        min-height: 260px
     }
 
 
@@ -1716,8 +1728,8 @@ footer {
         background-color: rgba(0, 13, 40, 1);
         border-radius: 50%;
         border: 2px solid white;
-        width: 6%;
-        height: auto;
+        width: 55px;
+        height:55px ;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1731,8 +1743,8 @@ footer {
         background-color: rgba(0, 13, 40, 1);
         border-radius: 50%;
         border: 2px solid white;
-        width: 6%;
-        height: auto;
+        width: 55px;
+        height:55px ;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1743,13 +1755,13 @@ footer {
     }
 
     .dislike>img {
-        width: 100%;
+        width: 50%;
         height: auto;
 
     }
 
     .like>img {
-        width: 100%;
+        width: 50%;
         height: auto;
 
     }
@@ -2093,8 +2105,9 @@ footer {
     #image {
         width: 480px;
         position: absolute;
-        top: -55%;
+        top: -40%;
         left: 60px;
+        height: auto;
     }
 
     #bulb {
@@ -2259,7 +2272,7 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10%;
+        gap: 7%;
         padding-left: 0.3em;
         padding-right: 0.3em;
     }
@@ -2268,8 +2281,8 @@ footer {
         background-color: rgba(0, 13, 40, 1);
         border-radius: 50%;
         border: 2px solid white;
-        width: 4%;
-        height: auto;
+        width: 55px;
+        height:55px ;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -2283,8 +2296,8 @@ footer {
         background-color: rgba(0, 13, 40, 1);
         border-radius: 50%;
         border: 2px solid white;
-        width: 4%;
-        height: auto;
+        width: 55px;
+        height:55px ;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -2295,13 +2308,13 @@ footer {
     }
 
     .dislike>img {
-        width: 100%;
+        width: 50%;
         height: auto;
 
     }
 
     .like>img {
-        width: 100%;
+        width: 50%;
         height: auto;
 
     }
@@ -2655,8 +2668,9 @@ footer {
     #image {
         width: 480px;
         position: absolute;
-        top: -55%;
+        top: -40%;
         left: 60px;
+        height: auto;
     }
 
     #bulb {
