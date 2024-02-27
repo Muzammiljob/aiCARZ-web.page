@@ -16,14 +16,14 @@ export default function App() {
     {
       question:
         "Is there a fee to use AICarz?",
-      answer:  "AICarz is free to download and use. We offer a basic plan that allows access to car recommendations and detailed analysis. For users looking for an enhanced experience, AICarz Pro provides additional features such as in-depth reviews, priority customer support, and a more personalized recommendation engine for a monthly subscription fee. (coming soon)",
+      answer:  "AICarz is free to download and use for everyone.",
       open: false,
     },
   
     {
       question:
-        "Can I save, share and compare cars on AICarz?",
-      answer:  "Yes! AICarz allows you to save your favorite cars, compare and even share them with friends and family ",
+        "Can I save or share cars on AICarz?",
+      answer:  "Yes! AICarz allows you to save your favorite cars, and share them with friends and family. ",
       open: false,
     },
    
@@ -31,34 +31,7 @@ export default function App() {
    
     
   
-    // {
-    //   question:
-    //   "I'm experiencing technical issues with AICarz. What should I do?",
-    //   answer:  <>If you encounter any issues or have suggestions for improvement, please reach out to our customer support team through the app's &quot;Support&quot; section or email us at <br />  <a href="www.aicarz.com">support@aicarz.com</a>. We are dedicated to providing a seamless user experience and value your input.</>
-    //   , open: false,
-    // },
-    
-    // {
-    //   question:
-    //     "How do I place an Advert?",
-    //   answer:  <>- Enter your car registration  in the advert section, and your vehicle details will be uploaded automatically. <br />
-    //   - Add your vehicle images manually. <br />
-    //   - Submit your Advert for Approval. <br />
-    //   Once approved, your advert will be up! Simple process!
-    //   </>,
-    //   open: false,
-    // },
-    // {
-    //   question:
-    //     "How can I scan for damages on the cars?",
-    //   answer: <>- Go to the bottom right corner to &quot;Car Check.&quot;  <br />
-    //   - Slide the slider option that appears on the center of the screen to AI Tire Check, or AI Car Check. <br />
-    //   Follow the simple instructions! <br /> <br />
-    //   We can indicate the following for your ease using our newly created World-first AI powered: - <br />
-    //    a.Panel gap checker <br />
-    //   b.Tyre Health checker</>, 
-    //     open: false,
-    // },
+
     {
       question: "I'm experiencing technical issues with AICarz. What should I do?",
       answer: (
@@ -71,10 +44,10 @@ export default function App() {
       question: "How do I place an Advert?",
       answer: (
         <> 
-          - Enter your car registration in the advert section, and your vehicle details will be uploaded automatically. <br />
+          - Enter your car registration in the advert section, and your vehicle details will be populated automatically. <br />
           - Add your vehicle images manually. <br />
-          - Submit your Advert for Approval. <br />
-          Once approved, your advert will be up! Simple process!
+          - Submit your Advert. It's free! <br />
+          Once approved, your advert will be live!
         </>
       ),
       open: false,
@@ -84,11 +57,11 @@ export default function App() {
       answer: (
         <>
           - Go to the bottom right corner to &quot;Car Check.&quot; <br />
-          - Slide the slider option that appears on the center of the screen to AI Tire Check, or AI Car Check. <br />
-          Follow the simple instructions! <br /> <br />
+          - Slide the slider option that appears on the center of the screen to AI tyre Check, or AI Panel Gap Checker. 
+            Follow the simple instructions! <br /> <br />
           We can indicate the following for your ease using our newly created World-first AI powered: - <br />
           a. Panel gap checker <br />
-          b. Tyre Health checker
+          b. Tyre health checker
         </>
       ),
       open: false,

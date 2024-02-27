@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import "./page.css"
 import Image from 'next/image'
 import Logo from '../../public/aseets/aircarzlogo.png'
@@ -12,11 +12,11 @@ import Dislike from "../../public/aseets/dislike.svg"
 import Bmw22 from '../../public/aseets/Bmw33.svg'
 import CarImage from "../../public/aseets/carfigma.svg"
 import Qr from "../../public/aseets/qrcode.svg"
-import Swipvedioone from '../../public/aseets/swiping.mp4'
+import Swipvedioone from '../../public/aseets/swips.mp4'
 import Swipvediotwo from '../../public/aseets/voice2.mp4'
-import Swipvediothree from '../../public/aseets/caradd.mp4'
-import Swipvediofour from '../../public/aseets/pannelgap.mp4'
-import Swipvediofive from '../../public/aseets/tyrecheaker.mp4'
+import Swipvediothree from '../../public/aseets/add2.mp4'
+import Swipvediofour from '../../public/aseets/gap2.mp4'
+import Swipvediofive from '../../public/aseets/tyre2.mp4'
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import EastIcon from '@mui/icons-material/East';
 import Qrwhite from "../../public/aseets/qrwhitw.svg"
@@ -121,8 +121,7 @@ const Page = () => {
 
         <>Easily assess damage with our AI tool that scans for gaps and imperfections in bodywork through pictures.</>,
 
-        <>Use our AI tool to scan tire photos, assess wear, and avoid penalties, hazards, or unexpected costs before buying
-        </>,
+        <>Use our AI tool to scan tyre photos, assess wear-n-tear to avoid penalties, hazards, or unexpected costs before buying.</>,
     ];
 
     const handleNext = () => {
@@ -159,7 +158,7 @@ const Page = () => {
 
 
 
-
+    const videoRef = useRef(null);
     const [likedCards, setLikedCards] = useState([]);
     const [dislikedCards, setDislikedCards] = useState([]);
     const [key, setKey] = useState(0);
@@ -185,6 +184,9 @@ const Page = () => {
         setKey(prevKey => prevKey + 1); // Increment the key to force re-render
     };
 
+    const handleVideoEnded = () => {
+        handleNext();
+    };
     return (
         <div >
             <div className="animate">
@@ -203,7 +205,7 @@ const Page = () => {
                         <span className="logo">
                             <Image src={Logo} alt='logo' width={114} height={47} />
                         </span>
-                       
+
                     </nav>
 
                     {/* HEADING OR PARAGRAPH */}
@@ -316,8 +318,13 @@ const Page = () => {
                                     </div>
                                     <div className="swipimage">
                                         {/* <Image src={images[currentIndex]} alt='qrcode' width={250} height={504} /> */}
-                                        <video className="video" autoPlay muted loop playsInline key={vedios[currentIndex]} playbackRate={2} data-aos="fade-left"
+                                        {/* <video className="video" autoPlay muted loop playsInline key={vedios[currentIndex]} playbackRate={6} data-aos="fade-left"
                                             data-aos-duration="4000" >
+                                            <source src={vedios[currentIndex] + `?t=${Date.now()}`} type="video/mp4" />
+                                            Your browser does not support the video tag.
+                                        </video> */}
+                                        <video className="video" autoPlay muted key={vedios[currentIndex]} data-aos="fade-left" data-aos-duration="4000" ref={videoRef}
+                                            onEnded={handleVideoEnded}>
                                             <source src={vedios[currentIndex] + `?t=${Date.now()}`} type="video/mp4" />
                                             Your browser does not support the video tag.
                                         </video>
@@ -350,7 +357,8 @@ const Page = () => {
 
                                 <div className="footercontent">
                                     <span className="text2">
-                                        <h1 id='two'>Swiping Makes it easy to manage ads you are much interested in</h1>
+                                        {/* <h1 id='two'>Swiping Makes it easy to manage ads you are much interested in</h1> */}
+                                        <h1 id='two'>Swiping Simplifies Managing Your Favorite Ads</h1>
                                         <p >Our Innovative App Brings Together a Curated Selection Of Cars Tailored To Your Preferences.</p>
                                     </span>
                                     <div className="socialbutton">
