@@ -4,7 +4,7 @@
 }
 .mainbody
 {
-    height: 1220px;
+    object-fit: contain;
     background-image: url(../../public//aseets//dontbg.png);
     background-repeat: no-repeat;
     background-size: cover;

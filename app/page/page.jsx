@@ -12,10 +12,10 @@ import Dislike from "../../public/aseets/dislike.svg"
 import Bmw22 from '../../public/aseets/Bmw33.svg'
 import CarImage from "../../public/aseets/carfigma.svg"
 import Qr from "../../public/aseets/qrcode.svg"
-import Swipvedioone from '../../public/aseets/swips.mp4'
-import Swipvediotwo from '../../public/aseets/voice2.mp4'
-import Swipvediothree from '../../public/aseets/add2.mp4'
-import Swipvediofour from '../../public/aseets/gap2.mp4'
+import Swipvedioone from '../../public/aseets/swipf.mp4'
+import Swipvediotwo from '../../public/aseets/voicef.mp4'
+import Swipvediothree from '../../public/aseets/addf.mp4'
+import Swipvediofour from '../../public/aseets/gapf.mp4'
 import Swipvediofive from '../../public/aseets/tyre2.mp4'
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import EastIcon from '@mui/icons-material/East';
