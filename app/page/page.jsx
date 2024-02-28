@@ -16,7 +16,7 @@ import Swipvedioone from '../../public/aseets/swipf.mp4'
 import Swipvediotwo from '../../public/aseets/voicef.mp4'
 import Swipvediothree from '../../public/aseets/addf.mp4'
 import Swipvediofour from '../../public/aseets/gapf.mp4'
-import Swipvediofive from '../../public/aseets/tyre2.mp4'
+import Swipvediofive from '../../public/aseets/tyref.mp4'
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import EastIcon from '@mui/icons-material/East';
 import Qrwhite from "../../public/aseets/qrwhitw.svg"
