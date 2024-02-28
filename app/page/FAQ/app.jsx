@@ -46,7 +46,7 @@ export default function App() {
         <> 
           - Enter your car registration in the advert section, and your vehicle details will be populated automatically. <br />
           - Add your vehicle images manually. <br />
-          - Submit your Advert. It's free! <br />
+          - Submit your Advert. It&apos;s free! <br />
           Once approved, your advert will be live!
         </>
       ),
@@ -66,6 +66,7 @@ export default function App() {
       ),
       open: false,
     }
+    
     
 
   ]);
